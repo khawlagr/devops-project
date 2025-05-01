@@ -1,0 +1,202 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+}
+h1 {
+  color: #3498db;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.welcome-msg {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+
+/* Panda Animation */
+.panda-animation {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+}
+
+.panda {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+
+.panda.active {
+    opacity: 1;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Fields */
+input[type="text"], input[type="email"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 12px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 14px;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+/* Profile Page */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-container h2 {
+    color: #333;
+}
+
+/* Success & Error Messages */
+.success, .error {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.success {
+    background-color: #28a745;
+}
+
+.error {
+    background-color: #dc3545;
+}
+
+
+.return-home {
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+
+
+
+
+/* Container for the password field and the icon */
+.password-container {
+    position: relative;
+    width: 100%; /* Adjusts the container width */
+  }
+  
+  /* Password input field */
+  .password-container input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Space for the icon inside */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding is considered in width */
+  }
+  
+  /* Eye icon to toggle password visibility */
+  .password-container .password-toggle {
+    position: absolute;
+    right: 10px; /* Align the icon to the right of the input */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the icon */
+    cursor: pointer;
+    font-size: 18px; /* Icon size */
+    color: #888; /* Icon color */
+  }
+  
+  /* Hover effect on the icon */
+  .password-container .password-toggle:hover {
+    color: #333;
+  }
+
+ 
+  
+  .password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
+ 
