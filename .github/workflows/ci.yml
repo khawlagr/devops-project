@@ -20,4 +20,4 @@ jobs:
       run: docker build -t myapp .
     
     - name: Run tests
-      run: docker run myapp test
+      run: docker run myapp npm test
