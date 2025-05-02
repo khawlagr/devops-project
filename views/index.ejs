@@ -1,41 +1,28 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil</title>
-  <link rel="stylesheet" href="/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
-  <style>
-  
-    body, html {
-      height: 100%; 
-      margin: 0; 
-      display: flex; 
-      justify-content: center; 
-      align-items: center; 
-      font-family: 'Roboto', sans-serif;
-      background-color: #f0f4f8;
-    }
-  </style>
-</head>
-<body>
-  <div class="container" style="text-align: center;">
-    <header>
-      <h1>Bienvenue sur notre site</h1>
-      <% if (user) { %>
-        <p class="welcome-msg">Connecté en tant que <strong><%= user.username %></strong></p>
-        <div class="links">
-          <a href="/profile" class="button">Profil</a> |
-          <a href="/logout" class="button logout">Déconnexion</a>
-        </div>
-      <% } else { %>
-        <div class="links">
-          <a href="/login" class="button">Connexion</a> |
-          <a href="/signup" class="button signup">Inscription</a>
-        </div>
-      <% } %>
-    </header>
+<%- include('./partials/header') %>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Discover the Amazing World of Animals</h1>
+    <p>Learn about different species from around the globe</p>
   </div>
-</body>
-</html>
+</section>
+
+<section class="animal-grid">
+  <h2>Featured Animals</h2>
+  
+  <div class="animals">
+    <% animals.forEach(animal => { %>
+      <div class="animal-card">
+        <img src="<%= animal.image %>" alt="<%= animal.name %>">
+        <div class="animal-info">
+          <h3><%= animal.name %></h3>
+          <p class="species"><%= animal.species %></p>
+          <p><%= animal.description.substring(0, 100) %>...</p>
+          <a href="/animal/<%= animal.id %>" class="btn">Learn More</a>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</section>
+
+<%- include('./partials/footer') %>

@@ -117,15 +117,15 @@ h1 {
     color: #007BFF;
 }
 
-/* Profile Page */
-.profile-container {
+/* index Page */
+.index-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
-.profile-container h2 {
+.index-container h2 {
     color: #333;
 }
 

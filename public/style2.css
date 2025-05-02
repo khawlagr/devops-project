@@ -1,0 +1,325 @@
+/* Global Styles */
+:root {
+    --primary-color: #86efac;
+    --secondary-color: #d9534f;
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --danger-color: #d9534f;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  /* Header */
+  header {
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo h1 {
+    font-size: 1.8rem;
+  }
+  
+  .logo a {
+    color: var(--primary-color);
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: var(--dark-color);
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  
+  /* Main Content */
+  main {
+    min-height: calc(100vh - 160px);
+    padding: 30px 0;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/jungle.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+    border-radius: 10px;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+  }
+  
+  /* Animal Grid */
+  .animal-grid {
+    padding: 20px 0;
+  }
+  
+  .animal-grid h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 2rem;
+  }
+  
+  .animals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .animal-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .animal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .animal-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .animal-info {
+    padding: 20px;
+  }
+  
+  .animal-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  .species {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #236b74;
+  }
+  
+  /* Animal Details */
+  .animal-details {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .animal-header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .animal-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .animal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 30px;
+  }
+  
+  .animal-image img {
+    border-radius: 10px;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .info-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .info-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+  }
+  
+  .info-card p {
+    margin-bottom: 10px;
+  }
+  
+  .back-btn {
+    background-color: var(--secondary-color);
+  }
+  
+  .back-btn:hover {
+    background-color: #c9302c;
+  }
+  
+  /* About Page */
+  .about {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  .about h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+  }
+  
+  .about-image img {
+    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .about-text h2 {
+    color: var(--primary-color);
+    margin: 20px 0 15px;
+  }
+  
+  .about-text p {
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--dark-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .bg-green-400 {
+    background-color: #86efac;
+  }
+
+  .text-green-400 { 
+    color: #86efac;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .animal-content,
+    .about-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .animals {
+      grid-template-columns: 1fr;
+    }
+    
+    .animal-card img {
+      height: 250px;
+    }
+    
+    .animal-header h1 {
+      font-size: 2rem;
+    }
+  }

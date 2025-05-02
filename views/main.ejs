@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+  <style>
+  
+    body, html {
+      height: 100%; 
+      margin: 0; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f4f8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" style="text-align: center;">
+    <header>
+      <h1>Bienvenue sur notre site</h1>
+      <% if (user) { %>
+        <p class="welcome-msg">Connecté en tant que <strong><%= user.username %></strong></p>
+        <div class="links">
+          <a href="/index" class="button">Profil</a> |
+          <a href="/logout" class="button logout">Déconnexion</a>
+        </div>
+      <% } else { %>
+        <div class="links">
+          <a href="/login" class="button">Connexion</a> |
+          <a href="/signup" class="button signup">Inscription</a>
+        </div>
+      <% } %>
+    </header>
+  </div>
+</body>
+</html>

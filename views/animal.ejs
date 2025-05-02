@@ -1,0 +1,36 @@
+<%- include('./partials/header') %>
+
+<section class="animal-details">
+  <div class="animal-header" style="background-color: #86efac;">
+    <h1><%= animal.name %></h1>
+    <p class="species"><%= animal.species %></p>
+  </div>
+
+  <div class="animal-content">
+    <div class="animal-image">
+      <img src="<%= animal.image %>" alt="<%= animal.name %>">
+    </div>
+    
+    <div class="animal-info">
+      <div class="info-card" >
+        <h3 style="color: #86efac;">Classification</h3>
+        <p><strong>Category:</strong> <%= animal.category %></p>
+        <p><strong>Species:</strong> <%= animal.species %></p>
+      </div>
+      
+      <div class="info-card">
+        <h3 style="color: #86efac;">Habitat</h3>
+        <p><%= animal.habitat %></p>
+      </div>
+      
+      <div class="info-card">
+        <h3 style="color: #86efac;">About</h3>
+        <p><%= animal.description %></p>
+      </div>
+      
+      <a href="/" class="btn back-btn">Back to All Animals</a>
+    </div>
+  </div>
+</section>
+
+<%- include('./partials/footer') %>
